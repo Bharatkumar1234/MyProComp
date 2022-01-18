@@ -1,0 +1,33 @@
+<div *ngIf = "receiveddata">
+    <h1>Selected Customer</h1>
+<div class="container">
+    <table  class="table" *ngIf = "receiveddata">
+        <thead class="table-dark">
+          <tr>
+            <th>S.NO</th>
+            <th>COMPANY NAME</th>
+            <th>COMPANY DISCRIPTION</th>
+            <th>COMPANY START YEAR</th>
+            <th>DEATILS</th>
+            <th>Company GST No</th>
+            <th>Comp Branches</th>
+            <th>STATE</th>
+            <th>COUNTRY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf = "receiveddata">
+            <td>{{DataCollect.id}}</td>
+            <td>{{DataCollect.companyName}}</td>
+            <td>{{DataCollect.companyDescription}}</td>
+            <td>{{DataCollect.companyStartYear}}</td>
+            <td>{{DataCollect.technologes}}</td>
+            <td>{{DataCollect.gstNo}}</td>
+            <td>{{DataCollect.branches}}</td>         
+            <td>{{DataCollect.state}}</td>
+            <td>{{DataCollect.country}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

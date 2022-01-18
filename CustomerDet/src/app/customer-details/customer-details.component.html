@@ -1,0 +1,58 @@
+<!-- <nav>
+    <div class="mt-4">
+    <div class="header-container">
+      <h1>Customer Records</h1>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Company Name</th>
+        <th scope="col">Company Description</th>
+        <th scope="col">Company Start Year</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let Bhar of users">
+          <td>{{Bhar.id}}</td>
+        <td>{{Bhar.companyName}}</td>
+        <td>{{Bhar.CompanyDescription}}</td>
+        <td>{{Bhar.CompanyStartYear}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary" (click)="convert(Bhar)">{{details?'hide':'details'}}</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div> -->
+<table  class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>COMPANY NAME</th>
+        <th>COMPANY DISCRIPTION</th>
+        <th>COMPANY START YEAR</th>
+        <th>DEATILS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Bhar of store">
+        <td>{{Bhar.id}}</td>
+        <td>{{Bhar.companyName}}</td>
+        <td>{{Bhar.companyDescription}}</td>
+        <td>{{Bhar.companyStartYear}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary" (click)="convert(Bhar)">{{Viewdetails?'hide':'Viewdetails'}}</button>
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+<app-customer-tables *ngIf = "viewdetails" [receiveddata]="sendCompany"></app-customer-tables>
+
+
+
